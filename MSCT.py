@@ -151,7 +151,7 @@ def dataReader(sub_list, task_list):
                 time_course = np.array(time_course)
 
                 time_course = time_course.T # 沿时间轴标准化
-                for ic in range(24):
+                for ic in range(NUM_IC):
                     for x in time_course[ic]:
                         x = float(x - np.mean(time_course[ic]))/np.std(time_course[ic])
                 time_course = time_course.T
