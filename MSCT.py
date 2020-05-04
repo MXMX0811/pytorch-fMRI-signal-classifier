@@ -35,7 +35,6 @@ class Cnn(nn.Module):
             torch.nn.LeakyReLU(),
         )
         self.conv2 = torch.nn.Sequential(
-            torch.nn.BatchNorm2d(1),
             torch.nn.Conv2d(
                 in_channels=1,
                 out_channels=32,
@@ -45,7 +44,6 @@ class Cnn(nn.Module):
             torch.nn.LeakyReLU(),
         )
         self.conv3 = torch.nn.Sequential(
-            torch.nn.BatchNorm2d(1),
             torch.nn.Conv2d(
                 in_channels=1,
                 out_channels=32,
@@ -55,7 +53,6 @@ class Cnn(nn.Module):
             torch.nn.LeakyReLU(),
         )
         self.conv4 = torch.nn.Sequential(
-            torch.nn.BatchNorm2d(1),
             torch.nn.Conv2d(
                 in_channels=1,
                 out_channels=32,
