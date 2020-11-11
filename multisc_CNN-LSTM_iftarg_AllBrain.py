@@ -136,9 +136,10 @@ def dataReader(sub_list, task_list):
                     cond[i] = 0
                 elif cond[i] == 'lure_hard':
                     cond[i] = 1
+                    
+            del cond[24]   # 最后一段时间不全        
             label.extend(cond)
             label = list(map(int,label))
-            del label[24]   # 最后一段时间不全
 
             data = img[:,:,:,12:]   # 从第13个时间点开始，删除前12个时间点
 
